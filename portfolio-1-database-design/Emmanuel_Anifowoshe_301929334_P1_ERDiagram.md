@@ -1,27 +1,30 @@
 # Alliance Chemicals Global IT Procurement ER Diagram
 
+This diagram shows the six tables, their fields and how they connect.
+
 ```mermaid
 erDiagram
     direction LR
+    Vendor ||--o{ ProcurementOrder : places
+    ProcurementOrder ||--|{ Asset : contains
+    Staff ||--o{ AssetAssignment : has
+    Asset ||--o{ AssetAssignment : appears_in
 
     Staff {
         integer staff_id PK
         varchar name
         varchar email UK
     }
-
     Vendor {
         integer vendor_id PK
         varchar name
         varchar email UK
     }
-
     ProcurementOrder {
         integer order_id PK
         integer vendor_id FK
         date order_date
     }
-
     Asset {
         integer asset_id PK
         varchar serial_number UK
@@ -29,52 +32,38 @@ erDiagram
         varchar status
         integer order_id FK
     }
-
     AssetAssignment {
         integer assignment_id PK
         integer staff_id FK
         integer asset_id FK
         date assigned_date
-        date return_date
+        date return_date "Optional until returned"
     }
-
     ScriptExecutionLog {
         integer log_id PK
         varchar script_name
         timestamp execution_timestamp
         text output_result
     }
-
-    Vendor ||--o{ ProcurementOrder : "places"
-    ProcurementOrder ||--|{ Asset : "contains"
-    Staff ||--o{ AssetAssignment : "has"
-    Asset ||--o{ AssetAssignment : "assigned via"
+```
 
 
 ## Reading the diagram
 
-PK (Primary Key): A unique identifier for every single record in a table. It ensures no duplicate rows exist.
+- **PK** identifies one record. **FK** links to another table. **UK** means a value is unique.
 
-FK (Foreign Key): A field that links to the primary key of another table, creating a relational bridge between two entities.
+- `||` means exactly one. `o{` means zero or many. `|{` means one or many.
 
-UK (Unique Key): A constraint ensuring all values in a specific field are distinct across the table, such as ensuring no two employees share the same email address.
+- A vendor can place zero or many procurement orders. Each order belongs to one vendor.
 
-Relationship Symbols
-The diagram uses standard crow's foot notation to illustrate how records connect:
+- A procurement order contains one or many assets. Each asset belongs to one order.
 
-|| represents exactly one.
+- A staff member can have zero or many asset assignments. Each assignment belongs to one staff member.
 
-o{ represents zero or many.
+- An asset can appear in zero or many assignments over time. Each assignment refers to one asset.
 
-|{ represents one or many.
+- The script execution log stands alone as an independent append-only record.
 
-Example: The relationship Vendor ||--o{ ProcurementOrder means that every procurement order must reference exactly one registered vendor. However, a vendor can exist in the system with zero, one, or many associated procurement orders over time.
+For example, a laptop (asset 10) can be assigned to a staff member in January, returned, and assigned to a different staff member in February. These are two separate assignment records.
 
-Optional Fields and Additional Logic
-The return_date in the AssetAssignment table is the only optional field in this design, as an asset may be currently in use and not yet returned.
-
-While the keys define the structure, several business rules require additional logic beyond simple table relationships:
-
-CHECK Constraints: Ensuring the assigned_date is not in the future requires a table-level check.
-
-Triggers and Transaction Logic: Verifying an asset's availability status before allowing a new assignment, ensuring an order contains at least one asset category, and maintaining the immutability of the ScriptExecutionLog all require application-level transaction blocks, database triggers, or strictly managed role permissions.
+All fields are required except return_date. The diagram shows assignment history; the separate rules preventing concurrent assignments of the same asset or assigning deployed assets are covered in the database design. Script immutability rules are also described there.
