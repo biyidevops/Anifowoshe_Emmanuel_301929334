@@ -74,7 +74,7 @@ Key: **vendor_id**.
 | 50 | God Pass |
 | 60 | Dozzytech |
 
-### ProcurementOrder
+### Procurement Order
 
 Key: **order_id**. vendor_id is a foreign key to Vendor.
 
@@ -103,7 +103,7 @@ Key: **staff_id**.
 | 2 | James Babalola | j.baba@alliancechemicals.org |
 | 3 | Chioma Phillips | c.phillips@alliancechemicals.org |
 
-### AssetAssignment
+### Asset Assignment
 
 The final design uses **assignment_id** as its primary key, rather than relying on an assignment date to identify a record. staff_id and asset_id are foreign keys. Adding an ID is a design choice, not what makes a table 3NF.
 
