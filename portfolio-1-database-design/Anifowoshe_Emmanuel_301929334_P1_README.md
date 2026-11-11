@@ -37,7 +37,7 @@ The scope includes tracking IT hardware inventory, basic vendor procurement, sta
 | [Anifowoshe_Emmanuel_301929334_P1_Schema.sql](Anifowoshe_Emmanuel_301929334_P1_Schema.sql) | PostgreSQL table creation script |
 | [Anifowoshe_Emmanuel_301929334_SampleData.sql](Anifowoshe_Emmanuel_301929334_SampleData.sql) | Valid sample records |
 | [Anifowoshe_Emmanuel_301929334_ConstraintTests.sql](Anifowoshe_Emmanuel_301929334_ConstraintTests.sql) | Invalid records for constraint testing |
-| [screenshots/](screenshots/) | Terminal execution and test result screenshots |
+| [Screenshots/](Screenshots/) | Terminal execution and test result screenshots |
 
 ## Implementation
 
