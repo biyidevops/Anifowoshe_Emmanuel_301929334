@@ -1,6 +1,6 @@
 # MIT 8103 Advanced Database Systems Portfolio
 
-Name: Emmanuel Anifowoshe
+Name: Anifowoshe Emmanuel
 
 Student ID: 301929334
 
