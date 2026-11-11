@@ -1,0 +1,64 @@
+alliance_it_portfolio=# SELECT 
+    s.name AS staff_name, 
+    a.category_name, 
+    a.serial_number, 
+    aa.assigned_date
+FROM 
+    public.assetassignment aa
+JOIN 
+    public.staff s ON aa.staff_id = s.staff_id
+JOIN 
+    public.asset a ON aa.asset_id = a.asset_id
+WHERE 
+    aa.return_date IS NULL
+ORDER BY 
+    aa.assigned_date ASC;
+     staff_name      | category_name | serial_number | assigned_date 
+---------------------+---------------+---------------+---------------
+ James Babalola      | Laptop        | SN123         | 2026-03-20
+ Emmanuel Anifowoshe | Toner         | SN456         | 2026-03-22
+(2 rows)
+
+alliance_it_portfolio=# SELECT 
+    a.category_name, 
+    a.serial_number, 
+    v.name AS vendor_name
+FROM 
+    public.asset a
+JOIN 
+    public.procurementorder po ON a.order_id = po.order_id
+JOIN 
+    public.vendor v ON po.vendor_id = v.vendor_id
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM public.assetassignment aa 
+    WHERE aa.asset_id = a.asset_id 
+    AND aa.return_date IS NULL
+)
+ORDER BY 
+    a.category_name ASC;
+ category_name | serial_number | vendor_name 
+---------------+---------------+-------------
+ Router        | SN789         | God Pass
+(1 row)
+
+alliance_it_portfolio=# SELECT 
+    s.name AS staff_name, 
+    COUNT(aa.assignment_id) AS total_assignments
+FROM 
+    public.staff s
+LEFT JOIN 
+    public.assetassignment aa ON s.staff_id = aa.staff_id
+GROUP BY 
+    s.staff_id, 
+    s.name
+ORDER BY 
+    total_assignments DESC, 
+    staff_name ASC;
+     staff_name      | total_assignments 
+---------------------+-------------------
+ Emmanuel Anifowoshe |                 2
+ James Babalola      |                 1
+(2 rows)
+
+alliance_it_portfolio=# 
