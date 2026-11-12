@@ -20,7 +20,7 @@ The database design successfully manages the critical operational rules of the A
 | [Anifowoshe_Emmanuel_301929334_P3_SessionA.sql](Anifowoshe_Emmanuel_301929334_P3_SessionA.sql) | The concurrency script for the first database connection |
 | [Anifowoshe_Emmanuel_301929334_P3_SessionB.sql](Anifowoshe_Emmanuel_301929334_P3_SessionB.sql) | The concurrency script for the second database connection |
 | [screenshots/Anifowoshe_Emmanuel_301929334_P3_Transactions.png](screenshots/Anifowoshe_Emmanuel_301929334_P3_Transactions.png) | Screenshot of the commit and rollback output |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P3_Wait.png](screenshots/Anifowoshe_Emmanuel_301929334_P3_Wait.png) | Screenshot showing Session B waiting on Session A |
+| [screenshots/Anifowoshe_Emmanuel_301929334_P3_ConcurrencyResult.png)](screenshots/Anifowoshe_Emmanuel_301929334_P3_SessionsWaiting.png) | Screenshot showing Session B waiting on Session A |
 | [screenshots/Anifowoshe_Emmanuel_301929334_P3_Outcome.png](screenshots/Anifowoshe_Emmanuel_301929334_P3_Outcome.png) | Screenshot of Session B's error and the final table state |
 
 ## References
