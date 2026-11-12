@@ -1,5 +1,11 @@
 # MIT 8103 Advanced Database Systems: Portfolio Summary
-Alliance Chemicals Global IT Procurement | Emmanuel Anifowoshe | Student ID: 301929334
+
+Alliance Chemicals Global IT Procurement
+
+Name: Emmanuel Anifowoshe
+
+Student ID: 301929334
+
 GitHub: https://github.com/biyidevops/Anifowoshe_Emmanuel_301929334
 
 ## Case study
@@ -8,7 +14,8 @@ The IT procurement system records staff, hardware assets, vendors, and assignmen
 ## Portfolio 1: Database Design and Modelling
 The relational design includes tables such as staff, asset, vendor, procurementorder, and assetassignment. Separating hardware assets from staff members and vendors allows multiple assets to be managed independently of their users. Each table has a primary key. Foreign keys connect assignments to existing staff and assets, and assets to their procurement orders. Constraints reject invalid dates and ensure data integrity. A unique partial index permits only one open assignment per physical asset. The normalisation examples demonstrate a combined assignment list becoming one assignment per row in 1NF. Asset details are separated from the assignment records in 2NF. Vendor and staff details move to their own respective tables in 3NF. The schema, ER diagram, and normalisation tables are saved in Portfolio 1. Six invalid inserts are rejected by the intended rules. At that stage, the records contain multiple staff members, assets, and assignments.
 
-![Database ER Diagram](screenshots/Anifowoshe_Emmanuel_301929334_P1_ERDiagram.png)
+![Database ER Diagram](portfolio-1-database-design/screenshots/Anifowoshe_Emmanuel_301929334_P1_ERDiagram.png)
+
 *Figure 1. The six database tables and their relationships, where PK identifies a unique row and FK links tables together. Each asset assignment connects one staff member to one specific asset, while each asset links back to a procurement order and vendor. The standalone script execution log tracks automated administrative tasks, while a staff member, vendor, or order can have zero or many related records within the core system.*
 
 ## Portfolio 2: Query Processing and Optimisation
@@ -49,9 +56,13 @@ Managing the simultaneous database connections in Portfolio 3 (Session A and Ses
 
 ## References
 [1] PostgreSQL Global Development Group. PostgreSQL 16: Using EXPLAIN. https://www.postgresql.org/docs/16/using-explain.html
+
 [2] PostgreSQL Global Development Group. PostgreSQL 16: Transaction Isolation. https://www.postgresql.org/docs/16/transaction-iso.html
+
 [3] MongoDB. Data Modeling in MongoDB. https://www.mongodb.com/docs/manual/data-modeling/
+
 [4] MongoDB. Replication. https://www.mongodb.com/docs/manual/replication/
+
 [5] MongoDB. Sharding. https://www.mongodb.com/docs/manual/sharding/
 
 ## AI-use declaration
