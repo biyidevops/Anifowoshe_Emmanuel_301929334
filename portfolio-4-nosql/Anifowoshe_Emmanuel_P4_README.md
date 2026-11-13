@@ -24,10 +24,10 @@ A document-based model allows a single event record to keep its associated staff
 ## Files
 | File | Contents |
 | :--- | :--- |
-| [Anifowoshe_Emmanuel_301929334_P4_Setup.md](Anifowoshe_Emmanuel_301929334_P4_Setup.md) | Local MongoDB Codespaces setup documentation |
-| [Anifowoshe_Emmanuel_301929334_P4_MongoDB.js](Anifowoshe_Emmanuel_301929334_P4_MongoDB.js) | The MongoDB data insertion and query script |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P4_MongoDBConnection.png](screenshots/Anifowoshe_Emmanuel_301929334_P4_MongoDBConnection.png) | Screenshot proving successful local database connection |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P4_EventsAndQueries.png](screenshots/Anifowoshe_Emmanuel_301929334_P4_EventsAndQueries.png) | Screenshot of the NoSQL query results |
+| [Anifowoshe_Emmanuel_P4_Setup.md](Anifowoshe_Emmanuel_P4_Setup.md) | Local MongoDB Codespaces setup documentation |
+| [Anifowoshe_Emmanuel_P4_MongoDB.js](Anifowoshe_Emmanuel_P4_MongoDB.js) | The MongoDB data insertion and query script |
+| [screenshots/Anifowoshe_Emmanuel_P4_MongoDBConnection.png](screenshots/Anifowoshe_Emmanuel_P4_MongoDBConnection.png) | Screenshot proving successful local database connection |
+| [screenshots/Anifowoshe_Emmanuel_P4_EventsAndQueries.png](screenshots/Anifowoshe_Emmanuel_P4_EventsAndQueries.png) | Screenshot of the NoSQL query results |
 
 ## References
 * [MongoDB query embedded documents](https://www.mongodb.com/docs/manual/tutorial/query-embedded-documents/)

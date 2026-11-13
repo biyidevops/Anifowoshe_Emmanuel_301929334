@@ -19,10 +19,10 @@ Before indexing, the planner used a Sequential Scan to read all 100,000 rows to 
 
 | File | Contents |
 | :--- | :--- |
-| [Anifowoshe_Emmanuel_301929334_P2_Queries.sql](Anifowoshe_Emmanuel_301929334_P2_Queries.sql) | The three Portfolio 2 queries and the benchmarking SQL |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P2_QueryResults.txt](screenshots/Anifowoshe_Emmanuel_301929334_P2_QueryResults.txt) | Terminal output of the three query results |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P2_BeforeIndex.png](screenshots/Anifowoshe_Emmanuel_301929334_P2_BeforeIndex.png) | Screenshot of the EXPLAIN ANALYZE execution plan before indexing |
-| [screenshots/Anifowoshe_Emmanuel_301929334_P2_AfterIndex.png](screenshots/Anifowoshe_Emmanuel_301929334_P2_AfterIndex.png) | Screenshot of the EXPLAIN ANALYZE execution plan after indexing |
+| [Anifowoshe_Emmanuel_P2_Queries.sql](Anifowoshe_Emmanuel_P2_Queries.sql) | The three Portfolio 2 queries and the benchmarking SQL |
+| [screenshots/Anifowoshe_Emmanuel_P2_QueryResults.txt](screenshots/Anifowoshe_Emmanuel_P2_QueryResults.txt) | Terminal output of the three query results |
+| [screenshots/Anifowoshe_Emmanuel_P2_BeforeIndex.png](screenshots/Anifowoshe_Emmanuel_P2_BeforeIndex.png) | Screenshot of the EXPLAIN ANALYZE execution plan before indexing |
+| [screenshots/Anifowoshe_Emmanuel_P2_AfterIndex.png](screenshots/Anifowoshe_Emmanuel_P2_AfterIndex.png) | Screenshot of the EXPLAIN ANALYZE execution plan after indexing |
 
 ## Reference
 

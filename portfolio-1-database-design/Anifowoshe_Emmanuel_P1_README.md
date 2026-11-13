@@ -31,12 +31,12 @@ The scope includes tracking IT hardware inventory, basic vendor procurement, sta
 
 | File | Contents |
 | --- | --- |
-| [Anifowoshe_Emmanuel_301929334_P1_Design.md](Anifowoshe_Emmanuel_301929334_P1_Design.md) | Database design and business rules |
-| [Anifowoshe_Emmanuel_301929334_P1_ERDiagram.md](Anifowoshe_Emmanuel_301929334_P1_ERDiagram.md) | Entity-Relationship diagram |
-| [Anifowoshe_Emmanuel_301929334_P1_Normalisation.md](Anifowoshe_Emmanuel_301929334_P1_Normalisation.md) | Normalisation explanation with example tables |
-| [Anifowoshe_Emmanuel_301929334_P1_Schema.sql](Anifowoshe_Emmanuel_301929334_P1_Schema.sql) | PostgreSQL table creation script |
-| [Anifowoshe_Emmanuel_301929334_SampleData.sql](Anifowoshe_Emmanuel_301929334_SampleData.sql) | Valid sample records |
-| [Anifowoshe_Emmanuel_301929334_ConstraintTests.sql](Anifowoshe_Emmanuel_301929334_ConstraintTests.sql) | Invalid records for constraint testing |
+| [Anifowoshe_Emmanuel_P1_Design.md](Anifowoshe_Emmanuel_P1_Design.md) | Database design and business rules |
+| [Anifowoshe_Emmanuel_P1_ERDiagram.md](Anifowoshe_Emmanuel_P1_ERDiagram.md) | Entity-Relationship diagram |
+| [Anifowoshe_Emmanuel_P1_Normalisation.md](Anifowoshe_Emmanuel_P1_Normalisation.md) | Normalisation explanation with example tables |
+| [Anifowoshe_Emmanuel_P1_Schema.sql](Anifowoshe_Emmanuel_P1_Schema.sql) | PostgreSQL table creation script |
+| [Anifowoshe_Emmanuel_SampleData.sql](Anifowoshe_Emmanuel_SampleData.sql) | Valid sample records |
+| [Anifowoshe_Emmanuel_ConstraintTests.sql](Anifowoshe_Emmanuel_ConstraintTests.sql) | Invalid records for constraint testing |
 | [screenshots/](screenshots/) | Terminal execution and test result screenshots |
 
 ## Implementation
